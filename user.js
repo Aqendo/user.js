@@ -212,7 +212,7 @@ user_pref("network.predictor.enable-prefetch", false); // [FF48+] [DEFAULT: fals
  * [1] https://news.slashdot.org/story/15/08/14/2321202/how-to-quash-firefoxs-silent-requests ***/
 user_pref("network.http.speculative-parallel-limit", 0);
 /* 0605: disable mousedown speculative connections on bookmarks and history [FF98+] ***/
-//user_pref("browser.places.speculativeConnect.enabled", false);
+user_pref("browser.places.speculativeConnect.enabled", false);
 /* 0610: enforce no "Hyperlink Auditing" (click tracking)
  * [1] https://www.bleepingcomputer.com/news/software/major-browsers-to-prevent-disabling-of-click-tracking-privacy-risk/ ***/
    // user_pref("browser.send_pings", false); // [DEFAULT: false]
