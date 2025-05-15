@@ -105,10 +105,10 @@ user_pref("browser.newtabpage.activity-stream.default.sites", "");
 /*** [SECTION 0200]: GEOLOCATION ***/
 user_pref("_user.js.parrot", "0200 syntax error: the parrot's definitely deceased!");
 /* 0202: disable using the OS's geolocation service ***/
-user_pref("geo.provider.ms-windows-location", false); // [WINDOWS]
-user_pref("geo.provider.use_corelocation", false); // [MAC]
-user_pref("geo.provider.use_geoclue", false); // [FF102+] [LINUX]
-
+//user_pref("geo.provider.ms-windows-location", false); // [WINDOWS]
+//user_pref("geo.provider.use_corelocation", false); // [MAC]
+//user_pref("geo.provider.use_geoclue", false); // [FF102+] [LINUX]
+//
 /*** [SECTION 0300]: QUIETER FOX ***/
 user_pref("_user.js.parrot", "0300 syntax error: the parrot's not pinin' for the fjords!");
 /** RECOMMENDATIONS ***/
@@ -152,8 +152,8 @@ user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false); // [DEFAU
 /** OTHER ***/
 /* 0360: disable Captive Portal detection
  * [1] https://www.eff.org/deeplinks/2017/08/how-captive-portals-interfere-wireless-security-and-privacy ***/
-user_pref("captivedetect.canonicalURL", "");
-user_pref("network.captive-portal-service.enabled", false); // [FF52+]
+//user_pref("captivedetect.canonicalURL", "");
+//user_pref("network.captive-portal-service.enabled", false); // [FF52+]
 /* 0361: disable Network Connectivity checks [FF65+]
  * [1] https://bugzilla.mozilla.org/1460537 ***/
 user_pref("network.connectivity-service.enabled", false);
@@ -184,7 +184,7 @@ user_pref("_user.js.parrot", "0400 syntax error: the parrot's passed on!");
  * file, including the name, origin, size and a cryptographic hash of the contents, to the Google
  * Safe Browsing service which helps Firefox determine whether or not the file should be blocked
  * [SETUP-SECURITY] If you do not understand this, or you want this protection, then override this ***/
-user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+//user_pref("browser.safebrowsing.downloads.remote.enabled", false);
    // user_pref("browser.safebrowsing.downloads.remote.url", ""); // Defense-in-depth
 /* 0404: disable SB checks for unwanted software
  * [SETTING] Privacy & Security>Security>... "Warn you about unwanted and uncommon software" ***/
@@ -291,11 +291,11 @@ user_pref("browser.urlbar.pocket.featureGate", false); // [FF116+] [DEFAULT: fal
 user_pref("browser.urlbar.weather.featureGate", false); // [FF108+] [DEFAULT: false]
 user_pref("browser.urlbar.yelp.featureGate", false); // [FF124+]
 /* 0807: disable urlbar clipboard suggestions [FF118+] ***/
-   // user_pref("browser.urlbar.clipboard.featureGate", false);
+   user_pref("browser.urlbar.clipboard.featureGate", false);
 /* 0808: disable recent searches [FF120+]
  * [NOTE] Recent searches are cleared with history (2811+)
  * [1] https://support.mozilla.org/kb/search-suggestions-firefox ***/
-   // user_pref("browser.urlbar.recentsearches.featureGate", false);
+   user_pref("browser.urlbar.recentsearches.featureGate", false);
 /* 0810: disable search and form history
  * [NOTE] We also clear formdata on exit (2811+)
  * [SETUP-WEB] Be aware that autocomplete form data can be read by third parties [1][2]
@@ -317,7 +317,7 @@ user_pref("browser.formfill.enable", false);
  * [3] https://bugzilla.mozilla.org/1632765
  * [4] https://earthlng.github.io/testpages/visited_links.html (see github wiki APPENDIX A on how to use)
  * [5] https://lcamtuf.blogspot.com/2016/08/css-mix-blend-mode-is-bad-for-keeping.html ***/
-   // user_pref("layout.css.visited_links_enabled", false);
+   user_pref("layout.css.visited_links_enabled", false);
 /* 0830: enable separate default search engine in Private Windows and its UI setting
  * [SETTING] Search>Default Search Engine>Choose a different default search engine for Private Windows only ***/
 user_pref("browser.search.separatePrivateDefault", true); // [FF70+]
@@ -355,15 +355,15 @@ user_pref("_user.js.parrot", "1000 syntax error: the parrot's gone to meet 'is m
 /* 1001: disable disk cache
  * [NOTE] We also clear cache on exit (2811+)
  * [SETUP-CHROME] If you think disk cache helps perf, then feel free to override this ***/
-user_pref("browser.cache.disk.enable", false);
+//user_pref("browser.cache.disk.enable", false);
 /* 1002: set media cache in Private Browsing to in-memory and increase its maximum size
  * [NOTE] MSE (Media Source Extensions) are already stored in-memory in PB ***/
-user_pref("browser.privatebrowsing.forceMediaMemoryCache", true); // [FF75+]
-user_pref("media.memory_cache_max_size", 65536);
+//user_pref("browser.privatebrowsing.forceMediaMemoryCache", true); // [FF75+]
+//user_pref("media.memory_cache_max_size", 65536);
 /* 1003: disable storing extra session data [SETUP-CHROME]
  * define on which sites to save extra session data such as form content, cookies and POST data
  * 0=everywhere, 1=unencrypted sites, 2=nowhere ***/
-user_pref("browser.sessionstore.privacy_level", 2);
+//user_pref("browser.sessionstore.privacy_level", 2);
 /* 1005: disable automatic Firefox start and session restore after reboot [FF62+] [WINDOWS]
  * [1] https://bugzilla.mozilla.org/603903 ***/
 user_pref("toolkit.winRegisterApplicationRestart", false);
@@ -429,7 +429,7 @@ user_pref("security.OCSP.require", true);
 /* 1223: enable strict PKP (Public Key Pinning)
  * 0=disabled, 1=allow user MiTM (default; such as your antivirus), 2=strict
  * [SETUP-WEB] MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE ***/
-user_pref("security.cert_pinning.enforcement_level", 2);
+//user_pref("security.cert_pinning.enforcement_level", 2);
 /* 1224: enable CRLite [FF73+]
  * 0 = disabled
  * 1 = consult CRLite but only collect telemetry
@@ -437,9 +437,9 @@ user_pref("security.cert_pinning.enforcement_level", 2);
  * 3 = consult CRLite and enforce "Not Revoked" results, but defer to OCSP for "Revoked" (default)
  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1429800,1670985,1753071
  * [2] https://blog.mozilla.org/security/tag/crlite/ ***/
-user_pref("security.remote_settings.crlite_filters.enabled", true); // [DEFAULT: true FF137+]
-user_pref("security.pki.crlite_mode", 2);
-
+//user_pref("security.remote_settings.crlite_filters.enabled", true); // [DEFAULT: true FF137+]
+//user_pref("security.pki.crlite_mode", 2);
+//
 /** MIXED CONTENT ***/
 /* 1241: disable insecure passive content (such as images) on https pages ***/
    // user_pref("security.mixed_content.block_display_content", true); // Defense-in-depth (see 1244)
@@ -449,7 +449,7 @@ user_pref("security.pki.crlite_mode", 2);
  * [SETTING] Privacy & Security>HTTPS-Only Mode (and manage exceptions)
  * [TEST] http://example.com [upgrade]
  * [TEST] http://httpforever.com/ | http://http.rip [no upgrade] ***/
-user_pref("dom.security.https_only_mode", true); // [FF76+]
+//user_pref("dom.security.https_only_mode", true); // [FF76+]
    // user_pref("dom.security.https_only_mode_pbm", true); // [FF80+]
 /* 1245: enable HTTPS-Only mode for local resources [FF77+] ***/
    // user_pref("dom.security.https_only_mode.upgrade_local", true);
@@ -470,7 +470,7 @@ user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
  * only works when it's possible to add an exception
  * i.e. it doesn't work for HSTS discrepancies (https://subdomain.preloaded-hsts.badssl.com/)
  * [TEST] https://expired.badssl.com/ ***/
-user_pref("browser.xul.error_pages.expert_bad_cert", true);
+//user_pref("browser.xul.error_pages.expert_bad_cert", true);
 
 /*** [SECTION 1600]: REFERERS
                   full URI: https://example.com:8888/foo/bar.html?id=1234
@@ -488,8 +488,8 @@ user_pref("_user.js.parrot", "1700 syntax error: the parrot's bit the dust!");
 /* 1701: enable Container Tabs and its UI setting [FF50+]
  * [SETTING] General>Tabs>Enable Container Tabs
  * https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers ***/
-user_pref("privacy.userContext.enabled", true);
-user_pref("privacy.userContext.ui.enabled", true);
+//user_pref("privacy.userContext.enabled", true);
+//user_pref("privacy.userContext.ui.enabled", true);
 /* 1702: set behavior on "+ Tab" button to display container menu on left click [FF74+]
  * [NOTE] The menu is always shown on long press and right click
  * [SETTING] General>Tabs>Enable Container Tabs>Settings>Select a container for each new tab ***/
@@ -504,12 +504,12 @@ user_pref("privacy.userContext.ui.enabled", true);
 /*** [SECTION 2000]: PLUGINS / MEDIA / WEBRTC ***/
 user_pref("_user.js.parrot", "2000 syntax error: the parrot's snuffed it!");
 /* 2002: force WebRTC inside the proxy [FF70+] ***/
-user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
+//user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
 /* 2003: force a single network interface for ICE candidates generation [FF42+]
  * When using a system-wide proxy, it uses the proxy interface
  * [1] https://developer.mozilla.org/docs/Web/API/RTCIceCandidate
  * [2] https://wiki.mozilla.org/Media/WebRTC/Privacy ***/
-user_pref("media.peerconnection.ice.default_address_only", true);
+//user_pref("media.peerconnection.ice.default_address_only", true);
 /* 2004: force exclusion of private IPs from ICE candidates [FF51+]
  * [SETUP-HARDEN] This will protect your private IP even in TRUSTED scenarios after you
  * grant device access, but often results in breakage on video-conferencing platforms ***/
@@ -527,8 +527,8 @@ user_pref("dom.disable_window_move_resize", true);
 user_pref("_user.js.parrot", "2600 syntax error: the parrot's run down the curtain!");
 /* 2603: remove temp files opened from non-PB windows with an external application
  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=302433,1738574 ***/
-user_pref("browser.download.start_downloads_in_tmp_dir", true); // [FF102+]
-user_pref("browser.helperApps.deleteTempFileOnExit", true);
+//user_pref("browser.download.start_downloads_in_tmp_dir", true); // [FF102+]
+//user_pref("browser.helperApps.deleteTempFileOnExit", true);
 /* 2606: disable UITour backend so there is no chance that a remote page can use it ***/
 user_pref("browser.uitour.enabled", false);
    // user_pref("browser.uitour.url", ""); // Defense-in-depth
@@ -576,14 +576,14 @@ user_pref("browser.contentanalysis.default_result", 0); // [FF127+] [DEFAULT: 0]
 /* 2651: enable user interaction for security by always asking where to download
  * [SETUP-CHROME] On Android this blocks longtapping and saving images
  * [SETTING] General>Downloads>Always ask you where to save files ***/
-user_pref("browser.download.useDownloadDir", false);
-/* 2652: disable downloads panel opening on every download [FF96+] ***/
-user_pref("browser.download.alwaysOpenPanel", false);
-/* 2653: disable adding downloads to the system's "recent documents" list ***/
-user_pref("browser.download.manager.addToRecentDocs", false);
-/* 2654: enable user interaction for security by always asking how to handle new mimetypes [FF101+]
- * [SETTING] General>Files and Applications>What should Firefox do with other files ***/
-user_pref("browser.download.always_ask_before_handling_new_types", true);
+//user_pref("browser.download.useDownloadDir", false);
+///* 2652: disable downloads panel opening on every download [FF96+] ***/
+//user_pref("browser.download.alwaysOpenPanel", false);
+///* 2653: disable adding downloads to the system's "recent documents" list ***/
+//user_pref("browser.download.manager.addToRecentDocs", false);
+///* 2654: enable user interaction for security by always asking how to handle new mimetypes [FF101+]
+// * [SETTING] General>Files and Applications>What should Firefox do with other files ***/
+//user_pref("browser.download.always_ask_before_handling_new_types", true);
 
 /** EXTENSIONS ***/
 /* 2660: limit allowed extension directories
@@ -591,7 +591,7 @@ user_pref("browser.download.always_ask_before_handling_new_types", true);
  * The pref value represents the sum: e.g. 5 would be profile and application directories
  * [SETUP-CHROME] Breaks usage of files which are installed outside allowed directories
  * [1] https://archive.is/DYjAM ***/
-user_pref("extensions.enabledScopes", 5); // [HIDDEN PREF]
+//user_pref("extensions.enabledScopes", 5); // [HIDDEN PREF]
    // user_pref("extensions.autoDisableScopes", 15); // [DEFAULT: 15]
 /* 2661: disable bypassing 3rd party extension install prompts [FF82+]
  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1659530,1681331 ***/
@@ -624,17 +624,17 @@ user_pref("_user.js.parrot", "2800 syntax error: the parrot's bleedin' demised!"
  * [NOTE] In FF129+ clearing "siteSettings" on shutdown (2811+), or manually via site data (2820+) and
  * via history (2830), will no longer remove sanitize on shutdown "cookie and site data" site exceptions (2815)
  * [SETTING] Privacy & Security>History>Custom Settings>Clear history when Firefox closes | Settings ***/
-user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+//user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 
 /** SANITIZE ON SHUTDOWN: IGNORES "ALLOW" SITE EXCEPTIONS ***/
 /* 2811: set/enforce clearOnShutdown items (if 2810 is true) [SETUP-CHROME] [FF128+] ***/
-user_pref("privacy.clearOnShutdown_v2.cache", true); // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true); // [DEFAULT: true]
+//user_pref("privacy.clearOnShutdown_v2.cache", true); // [DEFAULT: true]
+//user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true); // [DEFAULT: true]
    // user_pref("privacy.clearOnShutdown_v2.siteSettings", false); // [DEFAULT: false]
 /* 2812: set/enforce clearOnShutdown items [FF136+] ***/
-user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", true); // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown_v2.downloads", true);
-user_pref("privacy.clearOnShutdown_v2.formdata", true);
+//user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", true); // [DEFAULT: true]
+//user_pref("privacy.clearOnShutdown_v2.downloads", true);
+//user_pref("privacy.clearOnShutdown_v2.formdata", true);
 /* 2813: set Session Restore to clear on shutdown (if 2810 is true) [FF34+]
  * [NOTE] Not needed if Session Restore is not used (0102) or it is already cleared with history (2811+)
  * [NOTE] If true, this prevents resuming from crashes (also see 5008) ***/
@@ -647,39 +647,39 @@ user_pref("privacy.clearOnShutdown_v2.formdata", true);
  * [WARNING] Be selective with what sites you "Allow", as they also disable partitioning (1767271)
  * [SETTING] to add site exceptions: Ctrl+I>Permissions>Cookies>Allow (when on the website in question)
  * [SETTING] to manage site exceptions: Options>Privacy & Security>Permissions>Settings ***/
-user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true);
+//user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true);
 
 /** SANITIZE SITE DATA: IGNORES "ALLOW" SITE EXCEPTIONS ***/
 /* 2820: set manual "Clear Data" items [SETUP-CHROME] [FF128+]
  * Firefox remembers your last choices. This will reset them when you start Firefox
  * [SETTING] Privacy & Security>Browser Privacy>Cookies and Site Data>Clear Data ***/
-user_pref("privacy.clearSiteData.cache", true);
-user_pref("privacy.clearSiteData.cookiesAndStorage", false); // keep false until it respects "allow" site exceptions
-user_pref("privacy.clearSiteData.historyFormDataAndDownloads", true);
-   // user_pref("privacy.clearSiteData.siteSettings", false);
+//user_pref("privacy.clearSiteData.cache", true);
+//user_pref("privacy.clearSiteData.cookiesAndStorage", false); // keep false until it respects "allow" site exceptions
+//user_pref("privacy.clearSiteData.historyFormDataAndDownloads", true);
+//   // user_pref("privacy.clearSiteData.siteSettings", false);
 /* 2821: set manual "Clear Data" items [FF136+] ***/
-user_pref("privacy.clearSiteData.browsingHistoryAndDownloads", true);
-user_pref("privacy.clearSiteData.formdata", true);
+//user_pref("privacy.clearSiteData.browsingHistoryAndDownloads", true);
+//user_pref("privacy.clearSiteData.formdata", true);
 
 /** SANITIZE HISTORY: IGNORES "ALLOW" SITE EXCEPTIONS ***/
 /* 2830: set manual "Clear History" items, also via Ctrl-Shift-Del [SETUP-CHROME] [FF128+]
  * Firefox remembers your last choices. This will reset them when you start Firefox
  * [SETTING] Privacy & Security>History>Custom Settings>Clear History ***/
-user_pref("privacy.clearHistory.cache", true); // [DEFAULT: true]
-user_pref("privacy.clearHistory.cookiesAndStorage", false);
-user_pref("privacy.clearHistory.historyFormDataAndDownloads", true); // [DEFAULT: true]
+//user_pref("privacy.clearHistory.cache", true); // [DEFAULT: true]
+//user_pref("privacy.clearHistory.cookiesAndStorage", false);
+//user_pref("privacy.clearHistory.historyFormDataAndDownloads", true); // [DEFAULT: true]
    // user_pref("privacy.clearHistory.siteSettings", false); // [DEFAULT: false]
 /* 2831: set manual "Clear History" items [FF136+] ***/
-user_pref("privacy.clearHistory.browsingHistoryAndDownloads", true); // [DEFAULT: true]
-user_pref("privacy.clearHistory.formdata", true);
-
-/** SANITIZE MANUAL: TIMERANGE ***/
+//user_pref("privacy.clearHistory.browsingHistoryAndDownloads", true); // [DEFAULT: true]
+//user_pref("privacy.clearHistory.formdata", true);
+//
+///** SANITIZE MANUAL: TIMERANGE ***/
 /* 2840: set "Time range to clear" for "Clear Data" (2820+) and "Clear History" (2830+)
  * Firefox remembers your last choice. This will reset the value when you start Firefox
  * 0=everything, 1=last hour, 2=last two hours, 3=last four hours, 4=today
  * [NOTE] Values 5 (last 5 minutes) and 6 (last 24 hours) are not listed in the dropdown,
  * which will display a blank value, and are not guaranteed to work ***/
-user_pref("privacy.sanitize.timeSpan", 0);
+//user_pref("privacy.sanitize.timeSpan", 0);
 
 /*** [SECTION 4000]: FPP (fingerprintingProtection)
    RFP (4501) overrides FPP
@@ -789,8 +789,8 @@ user_pref("_user.js.parrot", "4500 syntax error: the parrot's popped 'is clogs")
 /* 4502: set RFP new window size max rounded values [FF55+]
  * [SETUP-CHROME] sizes round down in hundreds: width to 200s and height to 100s, to fit your screen
  * [1] https://bugzilla.mozilla.org/1330882 ***/
-user_pref("privacy.window.maxInnerWidth", 1600);
-user_pref("privacy.window.maxInnerHeight", 900);
+//user_pref("privacy.window.maxInnerWidth", 1600);
+//user_pref("privacy.window.maxInnerHeight", 900);
 /* 4503: disable mozAddonManager Web API [FF57+]
  * [NOTE] To allow extensions to work on AMO, you also need 2662
  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1384330,1406795,1415644,1453988 ***/
@@ -1000,7 +1000,7 @@ user_pref("extensions.blocklist.enabled", true); // [DEFAULT: true]
 user_pref("network.http.referer.spoofSource", false); // [DEFAULT: false]
 /* 6004: enforce a security delay on some confirmation dialogs such as install, open/save
  * [1] https://www.squarefree.com/2004/07/01/race-conditions-in-security-dialogs/ ***/
-user_pref("security.dialog_enable_delay", 1000); // [DEFAULT: 1000]
+//user_pref("security.dialog_enable_delay", 1000); // [DEFAULT: 1000]
 /* 6008: enforce no First Party Isolation [FF51+]
  * [WARNING] Replaced with network partitioning (FF85+) and TCP (2701), and enabling FPI
  * disables those. FPI is no longer maintained except at Tor Project for Tor Browser's config ***/
